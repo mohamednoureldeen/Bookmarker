@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmarker</title>
+    <!-- ===== favicon ===== -->
+    <link rel="icon" href="./images/BM.png" />
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- bootstrap css link-->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!-- custom css link -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+
+
+    <section>
+        <div class="header">
+            <div class="container">
+                <div class="header-titel d-flex justify-content-center  py-5">
+                    <h1 class="p-2">Bookmarker</h1>
+                </div>
+                <div class="bookmark-body w-100 p-3  py-4 flex-column d-flex justify-content-center align-items-center gap-4 ">
+                    <h2>
+                    <i class="fa-solid fa-bookmark"></i>
+                        Bookmark your favorite sites
+                    <i class="fa-solid fa-bookmark"></i>
+                    </h2>
+
+<!-- Name and url form -->
+                    <div class="site-name w-100 d-flex flex-column justify-content-center">
+                        <label for="siteName" class="pb-2 fw-semibold">
+                            <i class="fa-solid fa-book-bookmark pe-2"></i>
+                            Site Name
+                        </label>
+                        <input oninput="valdiationInputs(this,'nameError')" class="form-control" id= "siteName" type="text" placeholder="Bookmark Name">
+                        <p id="nameError" class=" m-1 alert alert-danger d-none">"Invalid Site name: The name must contain at least 3 letters and include only alphabetical characters, spaces, hyphens, or apostrophes."</p>
+                    </div>
+
+
+
+                    <div class="site-name w-100 d-flex flex-column justify-content-center">
+                        <label for="siteUrl" class="pb-2 fw-semibold">
+                            <i class="fa-solid fa-link pe-2"></i>
+                            Site URL
+                        </label>
+                        <input oninput="valdiationInputs(this,'urlError')" class="form-control" id= "siteUrl" type="text" placeholder="Website Url">
+                        <p id="urlError" class=" m-1 opacity-80 alert alert-danger d-none">"Invalid URL: Please enter a valid URL starting with 'http://' or 'https://', followed by a valid domain name."</p>
+                    </div>
+
+<!-- form btn -->
+                    <button class="btn btn-submit" onclick="addSite()" id="submitBtn">Submit</button>
+                    <button class="btn btn-update px-5 d-none" onclick="updateSite()" id="updateBtn">Update</button>
+                </div>
+
+<!-- table -->
+                <table class="table table-striped table-hover mt-4 text-center ">
+                    <thead class="table-head">
+                        <th class="text-capitalize">index</th>
+                        <th class="text-capitalize">Website Name</th>
+                        <th class="text-capitalize">Visit</th>
+                        <th class="text-capitalize">Edit</th>
+                        <th class="text-capitalize">Delete</th>
+                    </thead>
+                    <tbody id="tableContent" class="table-body align-middle ">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- javascript -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
