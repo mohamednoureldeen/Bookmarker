@@ -71,12 +71,12 @@ function displaySite() {
   var cartona = "";
   for (var i = 0; i < siteList.length; i++) {
     cartona += `
-        <tr class="table-row">
+        <tr class="table-row ">
         <td scope="row">${i + 1}</td>
         <td>${siteList[i].name}</td>
-        <td>  <button onclick="window.open('${siteList[i].url}');" class="btn btn-visit" id="submitBtn"><i class="fa-solid fa-eye pe-2"></i>Visit</button></td>
-        <td>  <button onclick="setDataInfo(${i})" class="btn btn-edit" id="submitBtn"><i class="fas fa-edit pe-2"></i>Edit</button></td>
-        <td>  <button onclick="deleteSite(${i})" class="btn btn-delete" id="submitBtn"><i class="fa-solid fa-trash-can pe-2"></i>Delete</button></td>
+        <td>  <button onclick="window.open('${siteList[i].url}');" class=" btn-table btn btn-visit" ><i class="fa-solid fa-eye"></i><span class="hide-text">Visit</span></button></td>
+        <td>  <button onclick="setDataInfo(${i})" class="btn-table btn btn-edit"><i class=" fas fa-edit"></i><span class="hide-text">Edit</span></button></td>
+        <td>  <button onclick="deleteSite(${i})" class=" btn-table btn btn-delete"><i class="fa-solid fa-trash-can"></i><span class="hide-text">Delete</span></button></td>
         </tr>
         `;
   }

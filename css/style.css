@@ -145,6 +145,7 @@ img{
 
 
 
+
 .btn-visit{
     --bs-btn-color: #fff;
     --bs-btn-bg: #3bb269;
@@ -188,4 +189,37 @@ img{
 .table-hover{
     --bs-table-hover-bg : #393a3b41 !important;
 }
+
+.btn-table i{
+    padding-right: 5px;
+}
+
+/* media */
+
+@media screen and (max-width: 768px) {
+    .bookmark-body h2{
+        font-weight: 500;
+        font-size: 20px;
+    }
+    .btn-table i{
+        padding-right: 0px;
+    }
+    .hide-text{
+        display: none;
+    }
+}
+@media screen and(max-width: 576px) {
+    .bookmark-body h2{
+        font-weight: 400;
+        font-size: 18px;
+     
+    }
+    .btn-table i{
+        padding-right: 0px;
+    }
+    .hide-text{
+        display: none;
+    }
+}
+
 
